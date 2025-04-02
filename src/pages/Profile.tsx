@@ -42,7 +42,7 @@ export default function Profile() {
         .update({
           full_name: formData.full_name,
           avatar_url: formData.avatar_url,
-          updated_at: new Date(),
+          updated_at: new Date().toISOString(),
         })
         .eq('id', user.id);
 
