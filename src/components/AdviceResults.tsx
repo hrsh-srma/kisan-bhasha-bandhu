@@ -3,7 +3,7 @@ import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Leaf, Droplets, Seedling, Calendar, DollarSign, ArrowDownCircle } from "lucide-react";
+import { Leaf, Droplets, Calendar, DollarSign, ArrowDownCircle } from "lucide-react";
 
 type AdviceResultsProps = {
   adviceResult: {
@@ -93,7 +93,7 @@ const AdviceResults = ({ adviceResult, onReset }: AdviceResultsProps) => {
         <Card className="border-kisan-brown-200">
           <CardHeader className="bg-kisan-brown-50 border-b border-kisan-brown-100">
             <CardTitle className="text-lg text-kisan-brown-800 flex items-center gap-2">
-              <Seedling className="h-5 w-5 text-kisan-brown-700" />
+              <Leaf className="h-5 w-5 text-kisan-brown-700" />
               {t('advice.results.soilManagement')}
             </CardTitle>
           </CardHeader>
