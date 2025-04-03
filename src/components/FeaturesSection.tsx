@@ -3,6 +3,7 @@ import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Video, Users, Leaf, BookOpen } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const FeaturesSection: React.FC = () => {
   const { t } = useLanguage();
@@ -14,7 +15,8 @@ export const FeaturesSection: React.FC = () => {
       description: t('features.consult.desc'),
       cta: t('features.consult.cta'),
       color: 'bg-kisan-green-100',
-      iconColor: 'text-kisan-green-700'
+      iconColor: 'text-kisan-green-700',
+      link: '#'
     },
     {
       icon: Users,
@@ -22,7 +24,8 @@ export const FeaturesSection: React.FC = () => {
       description: t('features.visit.desc'),
       cta: t('features.visit.cta'),
       color: 'bg-kisan-gold-100',
-      iconColor: 'text-kisan-gold-700'
+      iconColor: 'text-kisan-gold-700',
+      link: '#'
     },
     {
       icon: Leaf,
@@ -30,7 +33,8 @@ export const FeaturesSection: React.FC = () => {
       description: t('features.advice.desc'),
       cta: t('features.advice.cta'),
       color: 'bg-kisan-brown-100',
-      iconColor: 'text-kisan-brown-700'
+      iconColor: 'text-kisan-brown-700',
+      link: '/crop-advice'
     },
     {
       icon: BookOpen,
@@ -38,7 +42,8 @@ export const FeaturesSection: React.FC = () => {
       description: t('features.tips.desc'),
       cta: t('features.tips.cta'),
       color: 'bg-kisan-cream-200',
-      iconColor: 'text-kisan-green-800'
+      iconColor: 'text-kisan-green-800',
+      link: '#'
     }
   ];
 
@@ -72,8 +77,11 @@ export const FeaturesSection: React.FC = () => {
               <Button 
                 variant="outline" 
                 className="mt-auto border-kisan-green-300 text-kisan-green-700 hover:bg-kisan-green-50 hover:border-kisan-green-500 justify-start"
+                asChild
               >
-                {feature.cta}
+                <Link to={feature.link}>
+                  {feature.cta}
+                </Link>
               </Button>
             </div>
           ))}
