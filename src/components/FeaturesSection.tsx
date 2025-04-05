@@ -16,7 +16,7 @@ export const FeaturesSection: React.FC = () => {
       cta: t('features.consult.cta'),
       color: 'bg-kisan-green-100',
       iconColor: 'text-kisan-green-700',
-      link: '#'
+      link: '/crop-advice' // Changed to crop-advice as a fallback
     },
     {
       icon: Users,
@@ -25,7 +25,7 @@ export const FeaturesSection: React.FC = () => {
       cta: t('features.visit.cta'),
       color: 'bg-kisan-gold-100',
       iconColor: 'text-kisan-gold-700',
-      link: '#'
+      link: '/crop-advice' // Changed to crop-advice as a fallback
     },
     {
       icon: Leaf,
@@ -43,7 +43,7 @@ export const FeaturesSection: React.FC = () => {
       cta: t('features.tips.cta'),
       color: 'bg-kisan-cream-200',
       iconColor: 'text-kisan-green-800',
-      link: '#'
+      link: '/crop-advice' // Changed to crop-advice as a fallback
     }
   ];
 
